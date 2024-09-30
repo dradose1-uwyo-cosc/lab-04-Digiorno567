@@ -96,17 +96,21 @@ min_temps = [
 # You cannot use any pre-existing functions (like mean()) and must perform the calculations manually.
 # Output the results of both calculations.
 mxtpavg=0
-for mxtp in max_temps:
-    mxtpavg+=mxtp
+#for mxtp in max_temps:
+    #mxtpavg+=mxtp
     #print(mxtpavg)
-mxtpavg=mxtpavg/len(max_temps)
+#mxtpavg=mxtpavg/len(max_temps)
 
 mntpavg=0
-for mntp in min_temps:
-    mntpavg+=mntp
+#for mntp in min_temps:
+    #mntpavg+=mntp
     #print(mntpavg)
-mntpavg=mntpavg/len(min_temps)
 
+for day in range(len(max_temps)):
+    mntpavg+=min_temps[day]
+    mxtpavg+=max_temps[day]
+mntpavg=mntpavg/len(min_temps)
+mxtpavg=mxtpavg/len(max_temps)
 print(mxtpavg)
 print(mntpavg)
 # For the next part, determine the highest and lowest recorded temperatures.
